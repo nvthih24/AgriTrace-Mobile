@@ -35,6 +35,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     'transporter': 'Nhà Vận Chuyển',
     'moderator': 'Kiểm Duyệt Viên',
     'manager': 'Nhà Bán Lẻ',
+    'manufacturer': 'Nhà Máy',
   };
 
   bool _isLoading = false;

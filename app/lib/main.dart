@@ -10,6 +10,7 @@ import 'screen/farmer_main_screen.dart';
 import 'screen/transporter_main_screen.dart';
 import 'screen/retailer_main_screen.dart';
 import 'screen/inspector_main_screen.dart';
+import 'screen/manufacturer_main_screen.dart';
 
 void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -62,6 +63,9 @@ class _MyAppState extends State<MyApp> {
           break;
         case 'moderator':
           nextScreen = const InspectorMainScreen();
+          break;
+        case 'manufacturer':
+          nextScreen = const ManufacturerMainScreen();
           break;
         default:
           nextScreen = const HomeScreen();

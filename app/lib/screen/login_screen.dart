@@ -14,6 +14,7 @@ import 'transporter_main_screen.dart';
 import 'inspector_main_screen.dart';
 import 'retailer_main_screen.dart';
 import 'forgot_password_screen.dart';
+import 'manufacturer_main_screen.dart';
 
 import '../configs/constants.dart';
 import '../services/api_service.dart';
@@ -223,6 +224,9 @@ class _LoginScreenState extends State<LoginScreen> {
         break;
       case 'manager':
         nextScreen = const RetailerMainScreen();
+        break;
+      case 'manufacturer':
+        nextScreen = const ManufacturerMainScreen();
         break;
       default:
         nextScreen = const HomeScreen();

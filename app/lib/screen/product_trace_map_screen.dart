@@ -99,7 +99,7 @@ class _ProductTraceMapScreenState extends State<ProductTraceMapScreen> {
                 boxShadow: [BoxShadow(blurRadius: 10, color: Colors.black12)],
               ),
               child: const Text(
-                "📍 Lộ trình được xác thực bởi Blockchain & VietMap",
+                "📍 Lộ trình được xác thực bởi Blockchain & Google Maps API",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,

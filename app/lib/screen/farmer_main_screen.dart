@@ -11,6 +11,7 @@ import 'harvest_product_screen.dart';
 import 'care_diary_screen.dart';
 import 'notification_screen.dart';
 import 'qr_scanner_screen.dart';
+import 'packaging_screen.dart';
 
 import '../configs/constants.dart';
 import '../widgets/statistics_chart.dart';
@@ -164,93 +165,6 @@ class _FarmerDashboardTabState extends State<FarmerDashboardTab> {
       _statsData = [pendingPlant, farming, pendingHarvest, done];
     });
   }
-
-  // void _runFilter() {
-  //   List<Map<String, dynamic>> results = [];
-  //   if (_searchKeyword.isEmpty && _selectedStatus == "Tất cả") {
-  //     results = myCrops;
-  //   } else {
-  //     results = myCrops.where((crop) {
-  //       final matchName = crop["name"].toString().toLowerCase().contains(
-  //         _searchKeyword.toLowerCase(),
-  //       );
-
-  //       // Logic lọc hiển thị (dựa trên status text)
-  //       bool matchStatus = true;
-  //       if (_selectedStatus != "Tất cả") {
-  //         String statusText = crop["status"] ?? "";
-  //         if (_selectedStatus == "Chờ duyệt")
-  //           matchStatus = statusText.contains("Chờ duyệt");
-  //         else if (_selectedStatus == "Đang trồng")
-  //           matchStatus = statusText.contains("Đang");
-  //         else if (_selectedStatus == "Đã thu hoạch")
-  //           matchStatus = statusText.contains("Đã");
-  //       }
-
-  //       return matchName && matchStatus;
-  //     }).toList();
-  //   }
-  //   setState(() => _foundProducts = results);
-  // }
-
-  // void _showFilterModal() {
-  //   showModalBottomSheet(
-  //     context: context,
-  //     shape: const RoundedRectangleBorder(
-  //       borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-  //     ),
-  //     builder: (_) => StatefulBuilder(
-  //       builder: (context, setModalState) => Container(
-  //         padding: const EdgeInsets.all(20),
-  //         child: Column(
-  //           mainAxisSize: MainAxisSize.min,
-  //           children: [
-  //             const Text(
-  //               "Lọc theo trạng thái",
-  //               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-  //             ),
-  //             const SizedBox(height: 15),
-  //             Wrap(
-  //               spacing: 10,
-  //               children: ["Tất cả", "Chờ duyệt", "Đang trồng", "Đã thu hoạch"]
-  //                   .map((s) {
-  //                     return ChoiceChip(
-  //                       label: Text(s),
-  //                       selected: _selectedStatus == s,
-  //                       selectedColor: kFarmerPrimaryColor,
-  //                       labelStyle: TextStyle(
-  //                         color: _selectedStatus == s
-  //                             ? Colors.white
-  //                             : Colors.black,
-  //                       ),
-  //                       onSelected: (v) {
-  //                         setState(() => _selectedStatus = s);
-  //                         setModalState(() {});
-  //                       },
-  //                     );
-  //                   })
-  //                   .toList(),
-  //             ),
-  //             const SizedBox(height: 20),
-  //             ElevatedButton(
-  //               style: ElevatedButton.styleFrom(
-  //                 backgroundColor: kFarmerPrimaryColor,
-  //               ),
-  //               onPressed: () {
-  //                 _runFilter();
-  //                 Navigator.pop(context);
-  //               },
-  //               child: const Text(
-  //                 "Áp dụng",
-  //                 style: TextStyle(color: Colors.white),
-  //               ),
-  //             ),
-  //           ],
-  //         ),
-  //       ),
-  //     ),
-  //   );
-  // }
 
   // Hàm hiển thị Mã QR
   void _showQrDialog(BuildContext context, String data, String name) {
